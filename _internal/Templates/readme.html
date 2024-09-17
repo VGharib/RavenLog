@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Bot for ARK: Survival Evolved</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Log Bot for "ARK Ascended"</h1>
+    <p>This application monitors 'Tribe Logs' and provides a general overview of in-game activity without requiring the game window to be active.</p>
+
+    <h2>Example</h2>
+    <p>With "ARK Ascended" running in the background, you are able to play other games/browse while keeping logs completely covered.</p>
+
+    <h2>Installation/Setup</h2>
+    <ul>
+        <li>Launch RavenLog Installer</li>
+        <li>Install the 64bit version of Tesseract. <a href="https://github.com/UB-Mannheim/tesseract/wiki">Tesseract Installation</a></li>
+        <li>After Tesseract installs, you will have to set up your Discord Webhooks (2-3). <a href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks">Guide on setting up Discord Webhooks</a></li>
+        <li>Get the "roleid" of the Roles that you want to ping in Discord. <a href="https://discordhelp.net/role-id">Guide on getting role ID</a></li>
+    </ul>
+
+    <h2>settings.ini Configuration</h2>
+    <pre>
+Log_Alert
+  alert_urls = Live Updates
+  log_urls = General Update
+  ocr_urls = Image-Text
+
+Roles
+  roles = Main Role ID to Ping
+  svroles = Server Specific Role
+    </pre>
+
+    <h2>Running the bot</h2>
+    <p>Open RavenLog.exe and follow the instructions. If everything is set up correctly, you should see the application monitoring logs as expected.</p>
+    <p>Note: Please use the default game INI for the best experience.</p>
+<h2>Alert Descriptions</h2>
+<p>Here’s what each alert in the application signifies:</p>
+<ul>
+    <li><strong>Kills:</strong> Notifies you when your tribe has eliminated another player or creature. (Works well with named turrets)</li>
+    <li><strong>Death & Destruction:</strong> Alerts you to any losses within your tribe, such as deaths or destroyed structures.</li>
+    <li><strong>Parasaur Ping:</strong> Triggered when your Parasaur detects an enemy nearby, ensuring you're aware of potential threats.</li>
+    <li><strong>Starvation:</strong> Informs you if one of your dinosaurs has died due to lack of food, helping you manage your creatures better.</li>
+    <li><strong>Demolition:</strong> Notifies you when someone in your tribe has demolished one of your own structures, useful for keeping track of changes within your base.</li>
+    <li><strong>Enemy Structure Destroyed:</strong> Reports when your tribe has demolished an enemy’s structure, keeping you informed of offensive activities.</li>
+    <li><strong>Log Positioning:</strong> Indicates potential issues with the log monitoring setup, such as the logs not appearing where expected, which may necessitate adjustments for accurate tracking.</li>
+</ul>
+</body>
+</html>
